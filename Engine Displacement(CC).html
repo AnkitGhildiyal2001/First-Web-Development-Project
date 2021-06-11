@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine Displacement(CC)</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(34, 184, 243);
+            font-style: oblique;
+
+            font-size: 55px;
+        }
+
+        #particles-js {
+            /* background-color: blue; */
+            height: 210vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+
+            background-color: black;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #54c463;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                Engine Displacement(CC)
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            Engine displacement is the measure of the cylinder volume swept by all of the pistons of a piston engine,
+            excluding the combustion chambers. It is commonly used as an expression of an engine's size, and by
+            extension as
+            a loose indicator of the power an engine might be capable of producing and the amount of fuel it should be
+            expected to consume. For this reason displacement is one of the measures often used in advertising, as well
+            as
+            regulating, motor vehicles.
+            <br><br>
+            It is usually expressed using the metric units of cubic centimetres (cc or cm3, equivalent to millilitres)
+            or
+            litres (l or L), or – particularly in the United States – cubic inches (CID, cu in, or in3).
+            <br><br>
+        </div>
+
+        <div class="cent">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Displacement.gif"><br>
+            One complete cycle of a four-cylinder, four-stroke<br> engine. The volume displaced is marked in orange.
+            <br><br>
+        </div>
+
+        <div class="text_style">
+            <span style="font-size:xx-large; font-weight:bold;">
+                Definition :<br>
+            </span> 
+            The overall displacement for a typical reciprocating piston engine is calculated by multiplying together
+            three values; the distance travelled by the piston (the stroke length), the circular area of the cylinder
+            (the bore), and the number of cylinders that comprise the whole engine.
+
+            The formula is:<br>
+
+            <img style="background-color: #fff;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dda5493171292ec172a087a2ee6cb24fbe120ad4"><br><br>
+            
+            Using this formula for non-typical types of engine, such as the Wankel design and the oval-piston type used
+            in Honda NR motorcycles, can sometimes yield misleading results when attempting to compare engines.
+            Manufacturers and regulators may develop and use specialised formulae to determine a comparative nominal
+            displacement for variant engine types.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Governmental regulations :<br>
+            </span> 
+            In several countries fees and taxes levied on road vehicles by transport authorities are scaled in
+            proportion to engine displacement. In countries where this is practised, vehicle manufacturers often seek to
+            increase power output through higher-revving engines or turbocharging, instead of increasing the
+            displacement.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;"> 
+                Examples of countries where the road taxes are based upon engine displacement :<br>
+            </span>
+
+            In some European countries, and which predates the EU, there is one charge for engines over 1.0 litre, and
+            another at the level of about 1.6 litres.<br>
+            In the United Kingdom, cars registered after 1 March 2001 are taxed based on the exhaust emissions. However,
+            cars registered before this date are taxed based on engine displacement. Cars under 1549 cm3 qualify for a
+            lower tax rate.<br>
+            In Japan, the engine displacement is one of the factors (along with overall vehicle size and power output)
+            used to determine the vehicle size class and therefore the cost of road tax for the vehicle
+            In France and some other EU countries, mopeds with a displacement of less than 50 cc (3.1 cu in) can be
+            driven with minimum qualifications. This led to all light motorbikes having a displacement of about 49.9
+            cm3.<br>
+            In many areas of the United States, Canada (except Quebec[2]), Australia and New Zealand, the road taxes are
+            not based on engine displacement. However, the engine displacement is often used in low-powered scooters or
+            mopeds to determine whether a licence is required to operate the vehicle. A common threshold is 50 cc (3.1
+            cu in).<br>
+            Wankel engines are able to produce higher power levels for a given displacement. Therefore, they are
+            generally taxed as 1.5 times[citation needed] their stated physical displacement (1.3 litres becomes
+            effectively 2.0, 2.0 becomes effectively 3.0), although actual power outputs can be higher than suggested by
+            this conversion factor.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Automotive model names :<br>
+            </span> 
+            Historically, many car model names have included their engine displacement. Examples include the 1923–1930
+            Cadillac Series 353 (powered by a 353 Cubic inch/5.8-litre engine), and the 1963–1968 BMW 1800 (a 1.8-litre
+            engine) and Lexus LS 400 with a 3,968 cc engine. This was especially common in US Muscle Cars, like the Ford
+            Mustang Boss 302 and 429, and later GT 5.0L, The Plymouth Roadrunner 440, and the Chevrolet Chevelle SS 396
+            and 454.<br><br>
+
+            However, trends towards turbocharging and hybrid/electric drivetrains since 2010 have resulted in far fewer
+            model names being based on the engine displacement.
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

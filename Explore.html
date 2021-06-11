@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Raleway&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        li {
+            margin-left: 100px;
+        }
+
+        body {
+            height: 100vh;
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.pinimg.com/originals/be/11/6e/be116e3cd1530ee4b3bea80cc4b3f740.jpg);
+
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        let prev = "KTM RC125";
+        var BikesByCompany = {
+            "<200cc": ["KTM RC125", "KTM Duke125", "Honda CBR150R", "Honda Hornet 2.0", "Yamaha R15v2", "Yamaha YZF R15 V3", "Yamaha XSR155", "Yamaha MT-15", "TVS Apache RTR 160", "TVS Apache RTR 160 4V", "TVS Apache RTR 180", "Bajaj Pulsar 150", "Bajaj Pulsar 180", "Bajaj Pulsar 125 Neon", "Bajaj Pulsar NS 125", "Bajaj Pulsar NS160", "Bajaj Avenger Street 160", "Suzuki Gixxer SF", "Suzuki Gixxer", "Suzuki Intruder"],
+
+            ">=200cc & <300cc": ["KTM RC200", "KTM Duke200", "TVS Apache RTR 200 4V", "KTM 250 Adventure", "Honda CBR250R", "Yamaha FZ 25", "Yamaha FZS 25", "Bajaj Avenger Cruise 220", "Bajaj Dominar 250", "Bajaj Pulsar 220 F", "Bajaj Pulsar NS200", "Bajaj Pulsar RS200", "Suzuki Gixxer SF 250"],
+
+            ">=300cc & <600cc": ["Honda CB500X", "Royal Enfield Himalayan", , "Bajaj Dominar 400", "KTM RC390", "KTM Duke390", "KTM 390 Adventure", "Honda CB350RS", "Royal Enfield Classic 350", "Royal Enfield Bullet 350", "Royal Enfield Meteor 350", "BMW G 310 R", "BMW G 310 GS", "TVS Apache RR 310", "Kawasaki Ninja 300"],
+
+            ">=600cc & <700cc": ["Honda CBR650R", "Honda CB650R", "Royal Enfield Interceptor 650", "Royal Enfield Continental GT 650", "Kawasaki Ninja 650", "Kawasaki Z650", "Suzuki V-Strom 650XT"],
+
+            ">=700cc": ["BMW S 1000 RR", "BMW R 1250 GS", "BMW R 1250 GS Adventure", "BMW M 1000 RR", "BMW R nineT", "BMW R NineT Scrambler", "BMW R 18", "Kawasaki Ninja H2R", "Kawasaki Z900", "Kawasaki Ninja 1000", "Suzuki 2021 Hayabusa"]
+        }
+        function makeSubmenu(value) {
+            if (value.length == 0) document.getElementById("BikeSelect").innerHTML = "<option></option>";
+
+            else {
+                var BikesOptions = "";
+                for (BikeId in BikesByCompany[value]) {
+                    BikesOptions += "<option>" + BikesByCompany[value][BikeId] + "</option>";
+                }
+                document.getElementById("BikeSelect").innerHTML = BikesOptions;
+            }
+        }
+        function removeSelected() {
+            document.getElementById(prev).style.display = "none";
+        }
+        function displaySelected() {
+            var Bike = document.getElementById("BikeSelect").value;
+
+            document.getElementById(Bike).style.display = "block";
+            prev = Bike;
+        }
+        function resetSelection() {
+            document.getElementById("CompanySelect").selectedIndex = 0;
+            document.getElementById("BikeSelect").selectedIndex = 0;
+        }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="resetSelection()">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #5495c4;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="text-align: center; margin-top: 40px; color: #fff;" class="dropdown">
+        <span
+            style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: hsl(14, 91%, 64%); font-weight: bold; font-size: xx-large; font-style: oblique;">Select
+            Select Engine CC Range: </span>
+
+        <select class="btn btn-secondary dropdown-toggle" type="button" style="margin-top: -1%;" id="CompanySelect"
+            size="1" onchange="makeSubmenu(this.value)">
+            <option value="" disabled selected>--Choose CC Range--</option>
+            <option> &lt200cc</option>
+            <option> &gt=200cc & &lt300cc</option>
+            <option> &gt=300cc & &lt600cc</option>
+            <option> &gt=600cc & &lt700cc</option>
+            <option> &gt=700cc</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;
+        <span
+            style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: hsl(14, 91%, 64%); font-weight: bold; font-size: xx-large; font-style: oblique;">Select
+            Model: </span>
+        <select class="btn btn-secondary dropdown-toggle" type="button" style="margin-top: -1%;" id="BikeSelect"
+            size="1">
+            <option value="" selected="selected">Choose Bike</option>
+            <option></option>
+        </select><br><br>
+        <button class="btn btn-secondary" type="button" onclick="removeSelected(), displaySelected()">show
+            selected</button>
+
+        <div style=" text-align: center;">
+
+            <br><br>
+
+            <span id="KTM RC125" style="display: none;"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/45482/ktm-rc-125-front-three-quarter0.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 125cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;"> 44.95 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 14.5 PS @ 9250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 12 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 9.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-R17, Rear :- 150/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="KTM RC200" style="display: none"><img src="https://wallpaperaccess.com/full/1919083.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 199.5 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">45kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 25 PS @ 10000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 19.2 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 9.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70 - 17, Rear :-150/60 - 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM RC390" style="display: none"><img src="https://wallpaperaccess.com/full/2535504.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 373.3 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">45kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 43.5 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 36 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 9.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70 - 17, Rear :-150/60 - 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM Duke125" style="display: none"><img src="https://wallpapercave.com/wp/wp3763471.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">124.7 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">46.92 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 14.5 PS @ 9250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 12 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70 - 17, Rear :-150/60 - 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM Duke200" style="display: none"><img src="https://wallpaperaccess.com/full/3472309.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">199.5 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">46.92 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 25.83 PS @ 10,000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 19.5 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70 - 17, Rear :-150/60 - 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM Duke390" style="display: none"><img
+                    src="https://www.teahub.io/photos/full/194-1946956_ktm-390-duke-side-image-ktm-duke-390.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">373.2 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">46.92 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 43.5 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 37 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70 - 17, Rear :-150/60 - 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM 390 Adventure" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/44024/adventure-390-left-side-view.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">373.2 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">27.90 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 43.5 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 37 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 14.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-19, Rear :- 130/80-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="KTM 250 Adventure" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/52229/250-adventure-left-side-view.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">248.76 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">38.12 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 30 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 24 Nm @7500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 14.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-19, Rear :- 130/80-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CBR150R" style="display: none"><img src="https://wallpaperaccess.com/full/5103818.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: x-large; font-style: oblique; color: rgb(233, 228, 153);">
+                    SPECIFICATIONS:</div>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 149.16 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;">45kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 17.1 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 14.4 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17, Rear :- 130/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CBR250R" style="display: none"><img src="https://wallpapercave.com/wp/wp8603664.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 249.16 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Liquid Cooled, 4 Stroke, DOHC, SI Engine<br></span>
+                    Mileage : <span style="color: #06adfa;">30 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 26.5 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 22.9 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-17, Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CBR650R" style="display: none"><img src="https://wallpapercave.com/wp/wp4637246.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 648.72 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Liquid Cooled, 4 Stroke, DOHC, SI Engine<br></span>
+                    Mileage : <span style="color: #06adfa;">20.4 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 87.01 PS @ 12000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 57.5 Nm @ 8500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15.4 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-120/70-ZR17,Rear :-180/55-ZR17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CB500X" style="display: none"><img
+                    src="https://compare.pricesofindia.com/src/wallpapers/honda/honda-cb500x/Honda-CB500X-HD-Wallpapers-PricesOfIndia-1.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 471.03 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 Stroke, SI Engine (Parallel Twin)<br></span>
+                    Mileage : <span style="color: #06adfa;">20.4 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 847.5 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 43.2 Nm @ 6500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 17.7 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/80-19 Rear :-160/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda Hornet 2.0" style="display: none"><img
+                    src="https://static.autox.com/uploads/2020/08/Honda-Hornet-2-2-.jpg" height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 184.4 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 Stroke, SI Engine, BS-VI<br></span>
+                    Mileage : <span style="color: #06adfa;">20.4 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 17.26 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 16.1 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CB350RS" style="display: none"><img
+                    src="https://static.autox.com/uploads/2021/02/Honda-CB350RS-Image-5-.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 348.36 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 Stroke, SI Engine, BS-VI<br></span>
+                    Mileage : <span style="color: #06adfa;">20.4 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 21.07 PS @ 5500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 30 Nm @ 3000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-19, Rear :-150/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear 431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Honda CB650R" style="display: none"><img src="https://wallpaperaccess.com/full/2692235.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">648.72 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Liquid-cooled 4-stroke 16-valve DOHC inline-4
+                        cylinder<br></span>
+                    Mileage : <span style="color: #06adfa;">20.4 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 87.01 PS @ 12000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 57.5 Nm @ 8500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15.4 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-120/70ZR17, Rear :-180/55ZR17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+
+            </span>
+
+            <span id="Yamaha R15v2" style="display: none"><img src="https://wallpapercave.com/wp/wp3702491.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 149.8 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 Valve, Liquid Cooled, FI,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;"> 40kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 16.8 Bhp @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 15 Nm @ 7500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-R17, Rear :- 150/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Yamaha YZF R15 V3" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/bw/ec/34973/Yamaha-YZF-R15-V3-Front-threequarter-130091.jpg?wm=2"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Liquid-cooled, 4-stroke, SOHC, 4-valve<br></span>
+                    Mileage : <span style="color: #06adfa;"> 48.75 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 18.6 PS @ 10000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 14.1 Nm @ 8500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 11L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Yamaha XSR155" style="display: none"><img
+                    src="https://cdn.statically.io/img/imgd.aeplcdn.com/1280x720/bw/ec/41724/Yamaha-MT-15-166688.jpg?wm=2"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4-Stroke, 4-Valve, SOHC<br></span>
+                    Mileage : <span style="color: #06adfa;"> 48.58 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 19.3 PS @ 10000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 14.7 Nm @ 8500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 10L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Yamaha FZ 25" style="display: none"><img src="https://wallpapercave.com/wp/wp4482428.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 249cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Air cooled, 4-stroke, SOHC, 2-valv<br></span>
+                    Mileage : <span style="color: #06adfa;"> 44.95 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 20.8 PS @ 8000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 20.1 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 14L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Yamaha MT-15" style="display: none"><img src="https://wallpaperaccess.com/full/1400450.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Liquid cooled, 4-stroke, SOHC, 4-valve<br></span>
+                    Mileage : <span style="color: #06adfa;"> 52.02 kmpl <br></span>
+                    Max Power : <span style="color: #06adfa;"> 18.5 PS @ 10000 rpmbr></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.9 Nm @ 8500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 10L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Yamaha FZS 25" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/53845/left-front-three-quarter.jpeg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 249cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Air cooled, 4-stroke, SOHC, 2-valve<br></span>
+                    Mileage : <span style="color: #06adfa;"> 44.95 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 20.8 PS @ 8000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 20.1 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 14L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+
+            </span>
+
+            <span id="Royal Enfield Classic 350" style="display: none"><img
+                    src="https://www.teahub.io/photos/full/177-1776057_royal-enfield-classic-gunmetal-grey-photo-gallery-royal.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 346 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder 4 stroke, air-cooled fuel
+                        injection<br></span>
+                    Mileage : <span style="color: #06adfa;">45kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 19.36 PS @ 5250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 28 Nm @ 4000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.5L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90-19, Rear :-120/80-18<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-457.2 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Royal Enfield Bullet 350" style="display: none"><img
+                    src="https://wallpapercave.com/wp/wp3924402.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 346 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder 4 stroke, air cooled fuel
+                        injection<br></span>
+                    Mileage : <span style="color: #06adfa;">45 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 19.36 PS @ 5250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 28 Nm @ 4000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.5L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-3.25-19, Rear :-3.25-19<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-482.6 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Royal Enfield Himalayan" style="display: none"><img
+                    src="https://www.teahub.io/photos/full/177-1774912_royal-enfield-himalayan-bike.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 411 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder 4 stroke, air cooled fuel
+                        injection<br></span>
+                    Mileage : <span style="color: #06adfa;">32.04 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 24.31 PS @ 6500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 32 Nm @ 4000 - 4500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90-21 Rear :-120/90-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-533.4 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Royal Enfield Meteor 350" style="display: none"><img
+                    src="https://wallpaperaccess.com/full/5613220.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">349 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single-Cylinder, 4 Stroke, Air-Oil Cooled
+                        Engine<br></span>
+                    Mileage : <span style="color: #06adfa;">41.88 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 20.4 PS @ 6100 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 27 Nm @ 4000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-19 Rear :-140/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Royal Enfield Interceptor 650" style="display: none"><img
+                    src="https://wallpaperaccess.com/full/4475031.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">648 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Parallel twin, 4-stroke, single overhead cam,
+                        air/oil-cooled<br></span>
+                    Mileage : <span style="color: #06adfa;">25.35 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 47.65 PS @ 7150 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 52 Nm @ 5250 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.7L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-18, Rear :-130/70-18<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-457.2 mm,Rear :-457.2 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Royal Enfield Continental GT 650" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/49656/royalenfield-continental-gt-right-side12.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;">648 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Parallel twin, 4-stroke, single overhead cam,
+                        air/oil-cooled<br></span>
+                    Mileage : <span style="color: #06adfa;">25.35 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 47.65 PS @ 7150 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 52 Nm @ 5250 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13.7L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/90-18, Rear :-130/70-18<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-457.2 mm,Rear :-457.2 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="BMW G 310 R" style="display: none"><img
+                    src="https://static.autox.com/uploads/2020/12/2020-bmw-g310r-review.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 313 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Water-cooled, single-cylinder 4-stroke engine, four
+                        valves, two overhead camshafts and wet sump lubrication<br></span>
+                    Mileage : <span style="color: #06adfa;">32.46 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 34 PS @ 9250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 28 Nm @ 7500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 11L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-R17, Rear :- 150/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+
+            <span id="BMW S 1000 RR" style="display: none"><img src="https://wallpaperaccess.com/full/2700440.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 999 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Water/oil-cooled 4-cylinder 4-stroke in-line engine,
+                        four titanium valves per cylinder, BMW ShiftCam<br></span>
+                    Mileage : <span style="color: #06adfa;">32.46 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 206.6 PS @ 13500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 113 Nm @ 11000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">16.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-120/70-zR17, Rear :- 190/55-zR17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="BMW G 310 GS" style="display: none"><img src="https://wallpapercave.com/wp/wp3917174.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 313 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;">Single cylinder, 4-valves, Water-cooled DOHC
+                        engine<br></span>
+                    Mileage : <span style="color: #06adfa;">29.26 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 34 PS @ 9500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 28 Nm @ 7500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">11 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/80-R19, Rear :- 150/70-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="BMW R 1250 GS" style="display: none"><img src="https://wallpapercave.com/wp/wp4277931.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 1254 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;">Air-Liquid Cooled, Twin Cylinder, DOHC, Boxer
+                        Engine<br></span>
+                    Mileage : <span style="color: #06adfa;">15 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">136 PS @ 7750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 28 Nm @ 7500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">20 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-120/70-R19, Rear :-170/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="BMW R 1250 GS Adventure" style="display: none"><img
+                    src="https://wallpaperaccess.com/full/4716408.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 1254 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;">Air-Liquid Cooled, Twin Cylinder, DOHC, Boxer
+                        Engine<br></span>
+                    Mileage : <span style="color: #06adfa;">14 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">136 PS @ 7750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;">143 Nm @ 6250 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">30 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-120/70-R19, Rear :-170/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="BMW M 1000 RR" style="display: none"><img
+                    src="https://www.autoshifts.com/wp-content/uploads/2021/03/2021-BMW-M-1000-RR-First-look-superbike-racing-motorcycle-17.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 999 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;">Water/Oil-Cooled 4-Cylinder 4-Stroke In-Line Engine,
+                        Four Titanium Valves Per Cylinder, BMW Shiftcam<br></span>
+                    Mileage : <span style="color: #06adfa;">14 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">212.1 PS @ 14500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;">113 Nm @ 1100 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">16.5 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-120/70-17 Rear :-200/55-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="BMW R nineT" style="display: none"><img
+                    src="https://www.bhmpics.com/download/bmw_r_nine_t-1280x720.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 999 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;">Air/oil-cooled two-cylinder, four-stroke boxer engine
+                        with two camshafts and four radially arranged valves per cylinder as well as central
+                        counterbalance shaft<br></span>
+                    Mileage : <span style="color: #06adfa;">14 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">108.77 PS @ 7250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;">116 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">17 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-120/70-R19 Rear :-170/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="BMW R NineT Scrambler" style="display: none"><img
+                    src="https://images.alphacoders.com/848/thumb-1920-848153.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 999 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;">Air/oil-cooled two-cylinder, four-stroke boxer engine
+                        with two camshafts and four radially arranged valves per cylinder as well as central
+                        counterbalance shaft<br></span>
+                    Mileage : <span style="color: #06adfa;">14 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">108.77 PS @ 7250 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;">116 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">17 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-120/70-R19 Rear :-170/60-R17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="BMW R 18" style="display: none"><img
+                    src="https://4k-wallpapers.net/uploads/posts/2021-03/thumbs/1615358055_bmw-r18-first-edition-2020.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 1802 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;">Air/oil cooled two-cylinder four-stroke boxer engine
+                        with two chain-driven camshafts above the drive shaft.<br></span>
+                    Mileage : <span style="color: #06adfa;">14 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;">91.09 PS @ 4750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;">158 Nm @ 3000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;">16 L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;">Front :-130/90 -16 Rear :-180/65-16<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Ninja H2R" style="display: none"><img
+                    src="https://www.wallpapertip.com/wmimgs/186-1864494_kawasaki-ninja-h2r-predator.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 998 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> SI, 4 stroke, Oil cooled, Fuel injected<br></span>
+                    Mileage: <span style="color: #06adfa;"> 15 Km/l<br></span>
+                    Max Power: <span style="color: #06adfa;"> 322.00 bhp @ 14000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 165 Nm @ 12500 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Dual semi-floating Brembo Discs<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Brembo, opposed 2-piston caliper Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 17L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front 120/600 - R17, Rear : 190/650 - R17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> 17 inches<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Ninja 300" style="display: none"><img
+                    src="https://cutewallpaper.org/21/ninja-300-wallpapers/Ninja-300-wallpaper.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 300 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> Liquid-cooled, 4-stroke Parallel Twin<br></span>
+                    Mileage: <span style="color: #06adfa;"> 32.1 Km/l<br></span>
+                    Max Power: <span style="color: #06adfa;"> 39 PS @ 11000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 26.1 Nm @ 10000 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Dual semi-floating Brembo Discs<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Brembo, opposed 2-piston caliper Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 17L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-110/70-R17 Rear :-140/70-R17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Ninja 650" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/51302/ninja-650-right-front-three-quarter.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 650 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> 2-Cylinder, 4-Stroke, DOHC<br></span>
+                    Mileage: <span style="color: #06adfa;"> 25 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 68 PS @ 8000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 65.7 Nm @ 6500 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-120/70-ZR17, Rear :-160/60-ZR17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Z650" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/53379/z650-right-front-three-quarter.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 649 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> 2-Cylinder, 4-Stroke, DOHC<br></span>
+                    Mileage: <span style="color: #06adfa;"> 25 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 67.3 bhp @ 8,000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 64 Nm @ 6,700 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-1120/70ZR17M/C (58W), Rear :160/60ZR17M/C
+                        (69W)<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> 17 inch<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Z900" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/bw/ec/37191/Kawasaki-Z900-2019-Rear-141925.jpg?wm=2"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 948 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> In-Line Four, 4-stroke, 16-Valves, DOHC<br></span>
+                    Mileage: <span style="color: #06adfa;"> 15.26 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 125 PS @ 9500 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 698.6 Nm @ 7700 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 17L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-120/70-17 Rear :-180/55-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="Kawasaki Ninja 1000" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/49699/kawasaki-ninja-1000-side3.jpeg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 1048 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> Liquid-cooled, 4-stroke In-line Four<br></span>
+                    Mileage: <span style="color: #06adfa;"> 15.26 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 142 PS @ 10000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 111 Nm @ 8000 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 19L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: Front : <span style="color: #06adfa;"> 120/70-17 Rear : 190/50-ZR17<br></span>
+                    Wheel Size: Front : <span style="color: #06adfa;">-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="TVS Apache RTR 160" style="display: none"><img src="https://wallpapercave.com/wp/wp4270299.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 159.7 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> SI, 4- stroke, Air- Cooled<br></span>
+                    Mileage: <span style="color: #06adfa;"> 47KM/L<br></span>
+                    Max Power: <span style="color: #06adfa;"> 15.53 PS @ 8400 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 113.9 Nm @ 7000 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 20L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box <span style="color: #06adfa;">: 5 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-90/90-17, Rear :-110/80-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="TVS Apache RTR 160 4V" style="display: none"><img
+                    src="https://cdn.wallpapersafari.com/71/58/sUzWag.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 159.7 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> SI, 4 stroke, Oil cooled<br></span>
+                    Mileage: <span style="color: #06adfa;"> 54.78 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 17.63 PS @ 9250 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 14.73 Nm @ 7250 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Drum<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-90/90-17, Rear :-110/80-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="TVS Apache RTR 200 4V" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/49725/tvs-apache-200-front-three-quarter4.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 200 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> SI, 4 stroke, Oil cooled<br></span>
+                    Mileage: <span style="color: #06adfa;"> 54.78 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 17.63 PS @ 9250 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 14.73 Nm @ 7250 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Drum<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-90/90-17, Rear :-110/80-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="TVS Apache RR 310" style="display: none"><img src="https://wallpaperaccess.com/full/5654612.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 312.2 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> Single Cylinder, 4-Stroke, 4-Valve, Reverse Inclined
+                        DOHC, SI Engine<br></span>
+                    Mileage: <span style="color: #06adfa;"> 33.1 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> Urban, Rain: 25.8 PS, Sport, Track: 34 PS @ 9700
+                        rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> Urban, Rain: 25 Nm, Sport, Track: 27.3 Nm@ 7700
+                        rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 11L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-110/70-R17 Rear :-150/60-R17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+
+            <span id="TVS Apache RTR 180" style="display: none"><img
+                    src="https://cdn.wallpapersafari.com/14/58/VIvC02.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 180 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> SI, 4 stroke, Oil cooled, Fuel injected<br></span>
+                    Mileage: <span style="color: #06adfa;"> 33.1 kmpl<br></span>
+                    Max Power: <span style="color: #06adfa;"> 16.79 PS @ 8500 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 15.5 Nm @ 7000 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-90/90-17, Rear :-110/80-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar 150" style="display: none"><img src="https://wallpapercave.com/wp/wp4476335.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 149.5 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-Stroke, 2-Valve, Twin Spark BSVI Compliant DTS-i FI
+                        Engine<br></span>
+                    Mileage : <span style="color: #06adfa;"> 50Km/L<br></span>
+                    Max Power : <span style="color: #06adfa;"> 14 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.25 Nm @ 6500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90 17, Rear :-120/80 17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar 180" style="display: none"><img src="https://wallpapercave.com/wp/wp2708740.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 178.6 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 - stroke, SOHC 2-Valve, Air Cooled, BSVI Compliant
+                        DTS-i Fi Engine<br></span>
+                    Mileage : <span style="color: #06adfa;"> 45Km/L<br></span>
+                    Max Power : <span style="color: #06adfa;"> 17.02 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 14.52 Nm @ 6500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90 17, Rear :-120/80-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar 220 F" style="display: none"><img src="https://wallpapercave.com/wp/wp4973285.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 220cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-stroke, 2-Valve, Twin Spark BSVI Compliant, DTS-i FI
+                        Engine, Oil cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 40Km/L<br></span>
+                    Max Power : <span style="color: #06adfa;"> 20.4 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 18.55 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 15L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90 17, Rear :-120/80-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar NS200" style="display: none"><img src="https://wallpapercave.com/wp/wp2429083.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 200cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 - stroke, SOHC 4-Valve, Liquid Cooled, Triple Spark,
+                        BSVI Compliant FDTS-i Engine<br></span>
+                    Mileage : <span style="color: #06adfa;"> 40.84 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 24.5 PS @ 9750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 18.55 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17, Rear :-130/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar 125 Neon" style="display: none"><img
+                    src="https://www.rgbbikes.com/wp-content/uploads/2020/07/Bajaj-Pulsar-125-Split-Seat-Neon-Green.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 125cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Fuel Injection System, Triple Spark 4 Valve 200cc
+                        BSVI DTS-i FI Engine, Liquid Cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 51.46 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 24.5 PS @ 9750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 18.7 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-80/100-17 Rear :-100/90-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar RS200" style="display: none"><img
+                    src="https://www.rgbbikes.com/wp-content/uploads/2020/01/bajaj-pulsar-rs-200-pewter-grey.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 200cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> Fuel Injection System, Triple Spark 4 Valve 200cc BSVI
+                        DTS-i FI Engine, Liquid Cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 50 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 24.5 PS @ 9750 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 18.7 Nm @ 8000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17, Rear :-130/70-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar NS 125" style="display: none;"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/57695/left-side-view.jpeg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 124.45 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Fuel Injection System, Triple Spark 4 Valve
+                        200cc BSVI DTS-i FI Engine, Liquid Cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 46.5 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 11.6 bhp @ 8,500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 11 Nm @ 7,000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-80/100-17 Tubeless, Rear :-100/90-17
+                        Tubeless<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Pulsar NS160" style="display: none;"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/57987/pulsar-ns-160-right-front-three-quarter.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 160cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4 Stroke, SOHC 4 Valve, Oil Cooled, Twin Spark BSVI
+                        DTS-i FI engineLiquid Cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 40.6 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 17.2 PS @ 9000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 14.6 Nm @ 7250 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90 -17 Rear :-120/80 -17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Dominar 400" style="display: none;"><img
+                    src="https://cdn.wallpapersafari.com/83/29/jNuQoM.jpg" height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 373.3 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder, 4 stroke, DOHC, 4 Valve,
+                        Liquid cooled, Triple Spark,FIengineLiquid Cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 26.50 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 40 PS @ 8800 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 35 Nm @ 6500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-17, Rear
+                        :-150/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Avenger Cruise 220" style="display: none;"><img
+                    src="https://www.iamabiker.com/wp-content/uploads/2018/04/Bajaj-Avenger-Cruise-220-HD-wallpapers-2.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 220 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder, Oil cooled, Twin Spark
+                        DTS-i , Fuel Injected, 4 stroke, SOHC, 2 valve<br></span>
+                    Mileage : <span style="color: #06adfa;"> 26.50 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 19.03 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 17.55 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Drum<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90-17, Rear :-
+                        130/90-15<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-381 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Avenger Street 160" style="display: none;"><img
+                    src="https://www.teahub.io/photos/full/255-2557335_bajaj-avenger-street-180-action-image-avenger-bike.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 160 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single cylinder, Twin Spark DTS-i , Fuel
+                        Injected, 4 stroke, SOHC, 2 valve, Air cooledSOHC, 2 valve<br></span>
+                    Mileage : <span style="color: #06adfa;"> 47.2 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 15 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.7 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Drum<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90-17, Rear :-
+                        130/90-15<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm, Rear :-381 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Bajaj Dominar 250" style="display: none;"><img
+                    src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/45831/dominar-250-left-front-three-quarter.jpeg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 248.77 cc<br></span>
+                    Engine Type : <span style="color: #06adfa;"> Single Cylinder, 4 stroke, DOHC, 4 valve,
+                        Liquid Cooled, Twin Spark,FI<br></span>
+                    Mileage : <span style="color: #06adfa;"> 35.03 kmpl<br></span>
+                    Max Power : <span style="color: #06adfa;"> 27 PS @ 8500 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 23.5 Nm @ 6500 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 13L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-90/90-17, Rear :-
+                        130/90-15<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+            <span id="Suzuki 2021 Hayabusa" style="display: none"><img
+                    src="https://images.hdqwalls.com/download/suzuki-hayabusa-2021-8b-1280x720.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 1340cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-stroke, 4-cylinder, liquid-cooled,
+                        DOHC<br></span>
+                    Mileage : <span style="color: #06adfa;"> 14.9KM/L <br></span>
+                    Max Power : <span style="color: #06adfa;"> 190 PS @ 9700 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 150 Nm @ 7000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 20L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Analogue<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> 120/70<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> 431.8mm<br></span>
+                </span>
+            </span>
+
+            <span id="Suzuki Gixxer SF" style="display: none"><img
+                    src="https://www.teahub.io/photos/full/358-3589056_suzuki-gixxer-sf-155-motogp-edition-launched-at.jpg"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-Stroke, 1-cylinder, Air cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 47KM/L <br></span>
+                    Max Power : <span style="color: #06adfa;"> 13.6 PS @ 8000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.8 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L <br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17, Rear
+                        :-140/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+            </span>
+
+            <span id="Suzuki Gixxer" style="display: none"><img
+                    src="https://www.motoroids.com/wp-content/uploads/2019/08/Suzuki-Gixxer-155-3.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-Stroke, 1-cylinder, Air cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 47KM/L <br></span>
+                    Max Power : <span style="color: #06adfa;"> 13.6 PS @ 8000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.8 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17, Rear
+                        :-140/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+            </span>
+
+            <span id="Suzuki Gixxer SF 250" style="display: none"><img
+                    src="https://i.pinimg.com/originals/2c/6a/4c/2c6a4c05c27f54d3eb9706c523d301a1.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 249 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-Stroke, 1-cylinder, Air cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 47KM/L <br></span>
+                    Max Power : <span style="color: #06adfa;"> 26.5 PS @ 9300 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 22.2 Nm @ 7300 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 6-Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-110/70-17, Rear
+                        :-150/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+            </span>
+
+            <span id="Suzuki Intruder" style="display: none"><img
+                    src="https://imgd.aeplcdn.com/1280x720/bw/ec/31779/Suzuki-Intruder-Side-111461.jpg?v=201711021421"
+                    height="300px" width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement : <span style="color: #06adfa;"> 155 cc <br></span>
+                    Engine Type : <span style="color: #06adfa;"> 4-Stroke, 1-cylinder, Air cooled<br></span>
+                    Mileage : <span style="color: #06adfa;"> 44KM/L <br></span>
+                    Max Power : <span style="color: #06adfa;"> 13.6 PS @ 8000 rpm<br></span>
+                    Max Torque : <span style="color: #06adfa;"> 13.8 Nm @ 6000 rpm<br></span>
+                    Front Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Rear Brake : <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity : <span style="color: #06adfa;"> 12L<br></span>
+                    Speedometer : <span style="color: #06adfa;"> Digital<br></span>
+                    Transmission : <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box : <span style="color: #06adfa;"> 5 Speed<br></span>
+                    Tyre Size : <span style="color: #06adfa;"> Front :-100/80-17 Rear :-140/60-17<br></span>
+                    Wheel Size : <span style="color: #06adfa;"> Front :-431.8 mm,Rear :-431.8 mm<br></span>
+                </span>
+            </span>
+
+            <span id="Suzuki V-Strom 650XT" style="display: none"><img
+                    src="https://static.autox.com/uploads/2020/11/Suzuki-V-Strom-650-XT-Image-6-.jpg" height="300px"
+                    width="535px">
+
+                <br><br><br>
+                <div style="font-weight: bold; font-size: xx-large; font-style: oblique; color: rgb(4, 245, 165);">
+                    SPECIFICATIONS :</div>
+
+                <span style="font-size: large; font-style: oblique; color: #e43fd6">
+                    Engine Displacement: <span style="color: #06adfa;"> 645 cc<br></span>
+                    Engine Type: <span style="color: #06adfa;"> 4-stroke, liquid-cooled, DOHC, 90°
+                        V-twin<br></span>
+                    Mileage: <span style="color: #06adfa;"> 25.2KM/L <br></span>
+                    Max Power: <span style="color: #06adfa;"> 13.6 PS @ 8000 rpm<br></span>
+                    Max Torque: <span style="color: #06adfa;"> 13.8 Nm @ 6000 rpm<br></span>
+                    Front Brake: <span style="color: #06adfa;"> Double Disc<br></span>
+                    Rear Brake: <span style="color: #06adfa;"> Disc<br></span>
+                    Fuel Capacity: <span style="color: #06adfa;"> 20L<br></span>
+                    Speedometer: <span style="color: #06adfa;"> Analogue<br></span>
+                    Transmission: <span style="color: #06adfa;"> Manual<br></span>
+                    Gear Box: <span style="color: #06adfa;"> 6 Speed<br></span>
+                    Tyre Size: <span style="color: #06adfa;"> Front :-110/80-19, Rear :-150/70-17<br></span>
+                    Wheel Size: <span style="color: #06adfa;"> Front :-482.6 mm,Rear :-431.8 mm<br></span>
+
+                </span>
+            </span>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

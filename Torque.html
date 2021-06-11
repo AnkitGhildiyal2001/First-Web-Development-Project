@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torque</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(60, 168, 132);
+            font-style: oblique;
+
+            font-size: 55px;
+        }
+
+        #particles-js {
+            background-color: black;
+            height: 180vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #c454b1;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                Torque
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            In physics and mechanics, torque is the rotational equivalent of linear force. It is also referred to as
+            the moment, moment of force, rotational force or turning effect, depending on the field of study. The
+            concept originated with the studies by Archimedes of the usage of levers. Just as a linear force is a push
+            or a pull, a torque can be thought of as a twist to an object around a specific axis. Another definition of
+            torque is the product of the magnitude of the force and the perpendicular distance of the line of action of
+            a force from the axis of rotation. The symbol for torque is typically <span
+                style="font-weight: bold;">τ;</span>, the lowercase Greek letter tau. When being referred to as moment
+            of force, it is commonly denoted by M.<br><br>
+
+
+        </div>
+
+        <div class="cent">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Torque_animation.gif"><br>
+            Relationship between force F, torque τ, linear momentum p, and angular momentum L in a system which has
+            rotation constrained to only one plane (forces and moments due to gravity and friction not considered).
+            <br><br>
+        </div>
+
+        <div class="text_style">
+            
+            In three dimensions, the torque is a pseudovector; for point particles, it is given by the cross product of
+            the position vector (distance vector) and the force vector. The magnitude of torque of a rigid body depends
+            on three quantities: the force applied, the lever arm vector connecting the point about which the torque
+            is being measured to the point of force application, and the angle between the force and lever arm vectors.<br>
+            In symbols:<br>
+
+            <img style="background-color: #fff;"
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/91e737c6cd7e5dcff24bfcc3344de3188185e7a3"><br>
+            <img style="background-color: #fff;"
+                src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7fb4db57ddaf1c0aec8f66e42f03dedeb61ad156"><br><br>
+
+            where,<br>
+
+            <span style="font-weight: bold;">τ;</span> is the torque vector and τ; is the magnitude of the torque,<br>
+            <span style="font-weight: bold;">r</span> is the position vector (a vector from the point about which the
+            torque is being measured to the point where the force is applied),<br>
+            <span style="font-weight: bold;">F</span> is the force vector,<br>
+            <span style="font-weight: bold;">X</span> denotes the cross product, which produces a vector that is
+            perpendicular to both r and F following the right-hand rule,<br>
+            <span style="font-weight: bold;">&theta;</span> is the angle between the force vector and the lever arm
+            vector.<br><br>
+            The SI unit for torque is the Newton-metre (N⋅m). For more on the units of torque.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Defining terminology<br>
+            </span>
+
+            James Thomson, the brother of Lord Kelvin, introduced the term torque into English scientific literature in
+            1884. However, torque is referred to using different vocabulary depending on geographical location and
+            field of study. This article follows the definition used in US physics in its usage of the word torque.
+            In the UK and in US mechanical engineering, torque is referred to as moment of force, usually shortened to
+            moment. These terms are interchangeable in US physics[4] and UK physics terminology, unlike in US
+            mechanical engineering, where the term torque is used for the closely related "resultant moment of a
+            couple".<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Torque and moment in the US mechanical engineering terminology<br>
+            </span>
+            In US mechanical engineering, torque is defined mathematically as the rate of change of angular momentum of
+            an object (in physics it is called "net torque"). The definition of torque states that one or both of the
+            angular velocity or the moment of inertia of an object are changing. Moment is the general term used for the
+            tendency of one or more applied forces to rotate an object about an axis, but not necessarily to change the
+            angular momentum of the object (the concept which is called torque in physics). For example, a rotational
+            force applied to a shaft causing acceleration, such as a drill bit accelerating from rest, results in a
+            moment called a torque. By contrast, a lateral force on a beam produces a moment (called a bending moment),
+            but since the angular momentum of the beam is not changing, this bending moment is not called a torque.
+            Similarly with any force couple on an object that has no change to its angular momentum, such moment is also
+            not called a torque.<br><br>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

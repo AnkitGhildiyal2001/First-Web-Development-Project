@@ -1,0 +1,13 @@
+Engine Displacement
+Engine Type
+Mileage
+Max Power
+Max Torque
+Front Brake
+Rear Brake
+Fuel Capacity
+Speedometer
+Transmission
+Gear Box
+Tyre Size
+Wheel Size

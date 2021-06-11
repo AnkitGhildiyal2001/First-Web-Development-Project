@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tires</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(151, 86, 235);
+            font-style: oblique;
+
+            font-size: 55px;
+        }
+
+
+        #particles-js {
+            background-color: black;
+            height: 440vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #c45454;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                Tires
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            A tire (American English) or tyre (British English) is a ring-shaped component that surrounds a wheel's rim
+            to transfer a vehicle's load from the axle through the wheel to the ground and to provide traction on the
+            surface over which the wheel travels. Most tires, such as those for automobiles and bicycles, are
+            pneumatically inflated structures, which also provide a flexible cushion that absorbs shock as the tire
+            rolls over rough features on the surface. Tires provide a footprint, called a contact patch, that is
+            designed to match the weight of the vehicle with the bearing strength of the surface that it rolls over by
+            providing a bearing pressure that will not deform the surface excessively.<br>
+
+            The materials of modern pneumatic tires are synthetic rubber, natural rubber, fabric and wire, along with
+            carbon black and other chemical compounds. They consist of a tread and a body. The tread provides traction
+            while the body provides containment for a quantity of compressed air. Before rubber was developed, the first
+            versions of tires were simply bands of metal fitted around wooden wheels to prevent wear and tear. Early
+            rubber tires were solid (not pneumatic). Pneumatic tires are used on many types of vehicles, including cars,
+            bicycles, motorcycles, buses, trucks, heavy equipment, and aircraft. Metal tires are still used on
+            locomotives and railcars, and solid rubber (or other polymer) tires are still used in various non-automotive
+            applications, such as some casters, carts, lawnmowers, and wheelbarrows.
+            <br><br>
+
+            <span style="font-size:xxx-large; font-weight:bold;">
+                Applications :<br>
+            </span>
+            Tires may be classified according to the type of vehicle they serve. They may be distinguished by the load
+            they carry and by their application, e.g. to a motor vehicle, aircraft or bicycle.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Applications in Automotive :<br>
+            </span>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Light–medium duty :<br>
+            </span>
+
+            Light-duty tires for passenger vehicles carry loads in the range of 550 to 1,100 pounds (250 to 500 kg) on
+            the drive wheel. Light-to-medium duty trucks and vans carry loads in the range of 1,100 to 3,300 pounds (500
+            to 1,500 kg) on the drive wheel. They are differentiated by speed rating for different vehicles,
+            including (starting from the lowest speed to the highest): winter tires, light truck tires, entry-level car
+            tires, sedans and vans, sport sedans, and high-performance cars. Apart from road tires, there are
+            special categories:<br><br>
+
+            Snow tires are designed for use on snow and ice. They have a tread design with larger gaps than those on
+            summer tires, increasing traction on snow and ice. Such tires that have passed a specific winter traction
+            performance test are entitled to display a "Three-Peak Mountain Snow Flake" symbol on their sidewalls. Tires
+            designed for winter conditions are optimized to drive at temperatures below 7 °C (45 °F). Some snow tires
+            have metal or ceramic studs that protrude from the tire to increase traction on hard-packed snow or ice.
+            Studs abrade dry pavement, causing dust and creating wear in the wheel path. Regulations that require
+            the use of snow tires or permit the use of studs vary by country in Asia and Europe, and by state or
+            province in North America.<br>
+            All-season tires are typically rated for mud and snow (M+S). These tires have tread gaps that are smaller
+            than snow tires and larger than conventional tires. They are quieter than snow tires on clear roads, but
+            less capable on snow or ice.<br>
+            All-terrain tires are designed to have adequate traction off-road, yet have benign handling and noise
+            characteristics for highway driving. Such tires are rated better on snow and rain than street tires and
+            "good" on ice, rock and sand.<br>
+            Mud-terrain tires have a deeper, more open tread for good grip in mud, than all-terrain tires, but perform
+            less well on pavement.<br>
+            High-performance tires are rated for speeds up to 168 miles per hour (270 km/h) and ultra-high-performance
+            tires are rated for speeds up to 186 miles per hour (299 km/h), but have harsher ride characteristics and
+            durability.<br><br>
+            Other types of light-duty automotive tires include run-flat tires and race car tires:<br><br>
+
+            Run-flat tires obviate the need for a spare tire, because they can be travelled on at a reduced speed in the
+            event of a puncture, using a stiff sidewall to prevent damage to the tire rim. Vehicles without run-flat
+            tires rely on a spare tire, which may be a compact tire, to replace a damaged tire.<br>
+            Race car tires come in three main categories, DOT (street-legal), slick, and rain. Race car tires are
+            designed to maximize cornering and acceleration friction at the expense of longevity. Racing slicks have no
+            tread to maximize contact with the pavement and rain tires have channels to eject water to avoid
+            hydroplaning.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Heavy duty :<br>
+            </span>
+            Heavy duty tires for large trucks and buses come in a variety of profiles and carry loads in the range of
+            4,000 to 5,500 pounds (1,800 to 2,500 kg) on the drive wheel. These are typically mounted in tandem on
+            the drive axle.<br><br>
+
+            Truck tires come in a variety of profiles that include "low profile" with a section height that is 70 to 45%
+            of the tread width, "wide-base" for heavy vehicles, and a "super-single" tire that has the same total
+            contact pressure as a dual-mounted tire combination.<br>
+            Off-road tires are used on construction vehicles, agricultural and forestry equipment and other applications
+            that take place on soft terrain. The category also includes machinery that travels over hardened surfaces at
+            industrial sites, ports and airports. Tires designed for soft terrain have a deep, wide tread to provide
+            traction in loose dirt, mud, sand, or gravel.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Applications in other :<br>
+            </span>
+            Aircraft, bicycle and a variety of industrial applications have distinct design requirements.<br><br>
+
+            Aircraft tires are designed for landing on paved surfaces and rely on their landing gear to absorb the shock
+            of landing. To conserve weight and space required, they are typically small in proportion to the vehicle
+            that they support. Most are radial-ply construction. They are designed for a peak load when the aircraft is
+            stationary, although side loads upon landing are an important factor. Although hydroplaning is a concern
+            for aircraft tires, they typically have radial grooves and no lateral grooves or sipes. Some light
+            aircraft employ large-diameter, low-pressure tundra tires for landing on unprepared surfaces in wilderness
+            areas.<br>
+            Bicycle tires may be designed for riding on roads or over unimproved terrain and may be mounted on vehicles
+            with more than two wheels. There are three main types: clincher, wired and tubular. Most bicycle tires
+            are clincher and have a bead that presses against the wheel rim. An inner tube provides the air pressure and
+            the contact pressure between bead and wheel rim.<br>
+            Industrial tires support such vehicles as forklifts, tractors, excavators, road rollers, and bucket loaders.
+            Those used on smooth surfaces have a smooth tread, whereas those used on soft surfaces typically have large
+            tread features. Some industrial tires are solid or filled with foam.<br>
+            Motorcycle tires provide traction, resisting wear, absorbing surface irregularities, and allow the
+            motorcycle to turn via countersteering. The two tires' contact with the ground affect safety, braking, fuel
+            economy, noise, and rider comfort.<br>
+
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Construction types :<br>
+            </span>
+
+            Tire construction spans pneumatic tires used on cars, trucks and aircraft, but also includes non-automotive
+            applications with slow-moving, light-duty, or railroad applications, which may have non-pneumatic tires.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Automotive :<br>
+            </span>
+            Following the 1968 Consumer Reports announcement of the superiority of the radial design, radial tires began
+            an inexorable climb in market share, reaching 100% of the North America market in the 1980s. Radial tire
+            technology is now the standard design for essentially all automotive tires, but other methods have been
+            used.<br><br>
+
+            Radial tire construction utilizes body ply cords extending from the beads and across the tread so that the
+            cords are laid at approximately right angles to the centerline of the tread, and parallel to each other, as
+            well as stabilizer belts directly beneath the tread. The belts may be cord or steel. The advantages of this
+            construction include longer tread life, better steering control, fewer blowouts, improved fuel economy, and
+            lower rolling resistance. Disadvantages of the radial tire are a harder ride at low speeds on rough roads
+            and in the context of off-roading, decreased "self-cleaning" ability and lower grip ability at low
+            speeds.<br><br>
+
+            Bias tire (or cross ply) construction utilizes body ply cords that extend diagonally from bead to bead,
+            usually at angles in the range of 30 to 40 degrees, with successive plies laid at opposing angles forming a
+            crisscross pattern to which the tread is applied. The design allows the entire tire body to flex easily,
+            providing the main advantage of this construction, a smooth ride on rough surfaces. This cushioning
+            characteristic also causes the major disadvantages of a bias tire: increased rolling resistance and less
+            control and traction at higher speeds.<br><br>
+
+            A belted bias tire starts with two or more bias-plies to which stabilizer belts are bonded directly beneath
+            the tread. This construction provides smoother ride that is similar to the bias tire, while lessening
+            rolling resistance because the belts increase tread stiffness. The design was introduced by Armstrong, while
+            Goodyear made it popular with the "Polyglas" trademark tire featuring a polyester carcass with belts of
+            fiberglass. The "belted" tire starts two main plies of polyester, rayon, or nylon annealed as in
+            conventional tires, and then placed on top are circumferential belts at different angles that improve
+            performance compared to non-belted bias tires. The belts may be fiberglass or steel.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Other :<br>
+            </span>
+
+            Tubeless tires are pneumatic tires that do not require a separate inner tube.<br><br>
+
+            Semi-pneumatic tires have a hollow center, but they are not pressurized. They are light-weight, low-cost,
+            puncture proof, and provide cushioning. These tires often come as a complete assembly with the wheel and
+            even integral ball bearings. They are used on lawn mowers, wheelchairs, and wheelbarrows. They can also be
+            rugged, typically used in industrial applications, and are designed to not pull off their rim under use.<br><br>
+
+            An airless tire is a non-pneumatic tire that is not supported by air pressure. They are most commonly used
+            on small vehicles, such as golf carts, and on utility vehicles in situations where the risk of puncture is
+            high, such as on construction equipment. Many tires used in industrial and commercial applications are
+            non-pneumatic, and are manufactured from solid rubber and plastic compounds via molding operations. Solid
+            tires include those used for lawn mowers, skateboards, golf carts, scooters, and many types of light
+            industrial vehicles, carts, and trailers. One of the most common applications for solid tires is for
+            material handling equipment (forklifts). Such tires are installed by means of a hydraulic tire press.<br><br>
+
+            Wooden wheels for horse-drawn vehicles usually have a wrought iron tire. This construction was extended to
+            waggons on horse-drawn tramways, rolling on granite setts or cast iron rails.<br><br>
+
+            The wheels of some railway engines and older types of rolling stock are fitted with railway tires in order
+            to prevent the need to replace the entirety of a wheel. The tire, usually made of steel, surrounds the wheel
+            and is primarily held in place by interference fit.<br><br>
+
+            Aircraft tires may operate at pressures that exceed 200 pounds per square inch (14 bar; 1,400 kPa). Some
+            aircraft tires are inflated with nitrogen to "eliminate the possibility of a chemical reaction between
+            atmospheric oxygen and volatile gases from the tire inner liner producing a tire explosion".<br><br>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

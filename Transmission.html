@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmission</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(91, 204, 87);
+            font-style: oblique;
+
+            font-size: 60px;
+        }
+
+        #particles-js {
+            /* background-color: blue; */
+            height: 430vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+
+            background-color: black;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(238, 78, 153);">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                Transmission
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            A motorcycle transmission is a transmission created specifically for motorcycle applications. They may also
+            be found in use on other light vehicles such as motor tricycles and quadbikes, go-karts, offroad buggies,
+            auto rickshaws, mowers, and other utility vehicles, microcars, and even some superlight racing cars.
+            <br><br>
+        </div>
+
+        <div class="cent">
+            <img src="https://j.gifs.com/Ro822O.gif"><br>
+            Simple animation of a manual transmission
+            <br><br>
+        </div>
+
+        <div class="text_style">
+            <span style="font-size:xx-large; font-weight:bold;">
+                Manual gearing :<br>
+            </span> 
+            Most manual transmission two-wheelers use a sequential gearbox. Most motorcycles (except scooters) change
+            gears (of which they increasingly have five or six) by a foot-shift lever. On a typical motorcycle, either
+            first or second gear can be directly selected from neutral, but higher gears may only be accessed in order –
+            it is not possible to shift from second gear to fourth gear without shifting through third gear. A
+            five-speed of this configuration would be known as "one down, four up" because of the placement of the gears
+            with relation to neutral, though some motorcycle gearboxes and/or shift mechanisms can be reversed so that a
+            "one up, four down" shifting pattern can be used. Neutral is to be found "half a click" away from first and
+            second gears, so shifting directly between the two gears can be made in a single movement.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Automatic :<br>
+            </span> 
+            Fully-automatic transmissions are far less common on motorcycles than manuals, and are mostly found only on
+            motor scooters, mopeds, underbones, minibikes, and some custom cruisers and exotic sports bikes. Types
+            include: hydraulic automatic transmission, continuously variable transmission, and dual-clutch automatic
+            transmissions.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Semi-automatic :<br>
+            </span> 
+            Semi-automatic transmissions on motorcycles are also referred to as auto-clutch transmissions, or sometimes,
+            clutchless manual transmissions. They function in the same way as a conventional fully-manual motorcycle
+            with a sequential gearbox, except they utilize a fully-automatic clutch system, or sometimes torque
+            converter, but still require the rider's input to manually actuate change gears. They are much less common
+            than motorcycles with conventional manual transmissions, typically use a centrifugal clutch, and are mostly
+            found on smaller motorcycles, such as minibikes, underbone (step-thru) motorcycles (e.g., the Honda Super
+            Cub), smaller dirt bikes (such as pit bikes), and various (mostly older) mopeds and motor scooters.
+            Semi-automatic transmissions are often erroneously called "automatic" transmissions, which is only partially
+            correct but not fully correct, since the rider's input is still required for switching gears, and these
+            transmissions will not automatically change gears by themselves.<br><br>
+
+            Other applications of semi-automatic transmissions on motorcycles include the Yamaha FJR1300AE sport-touring
+            motorcycle, with the YCCS automatic clutch system, Honda's range of 2- and 3-speed Hondamatic semi-automatic
+            transmissions, used on various motorcycles throughout the 1970s and 1980s, and the three-wheeled BRP Can-Am
+            Spyder Roadster motorcycle, with its SE5 and SE6 range of transmissions. Some high-performance sport bikes
+            also use a trigger-shift system, with a handlebar-mounted trigger, paddle, switch, or button, and an
+            automatically-operated clutch system.<br><br>
+
+            It is also worth mentioning Quickshifters, which is an electronic device that allows for clutchless upshifts
+            (and sometimes downshifts) on high-performance motorcycles with a standard manual transmission. An ECU works
+            in conjunction with a sensor and a microcontroller (CPU) to cut the ignition momentarily and disengage the
+            clutch briefly, so the rider can switch gears. Bi-directional quickshiters are technically considered
+            semi-automatic since clutch actuation isn't required whatsoever, however, mono-directional quickshifters,
+            such as those used on the 2016 Kawasaki Ninja ZX-10R and the Ninja H2/R, only work on upshifts, and the
+            rider still has to manually actuate the clutch and blip the throttle on downshifts, so it's not really
+            semi-automatic, in that sense.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;"> 
+                Reverse gear :<br>
+            </span>
+            The weight of the largest touring motorcycles (sometimes in excess of 360 kg or 800 lbs) is sometimes such
+            that they cannot effectively be pushed backwards by a seated rider, and they are fitted with a reverse gear
+            as standard. In some cases, including the Honda Gold Wing and BMW K1200LT, this is not really a reverse
+            gear, but a feature of the starter motor which when reversed, performs the same function. To avoid
+            accidental operation, the reverse is often engaged using an entirely separate control switch - e.g., a
+            pull-toggle at the head of the fuel tank - when the main gearshift is in neutral.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;"> 
+                Shift control :<br>
+            </span>
+            In earlier times (pre-WWII), hand-operated gear changes were common, with a lever provided to the side of
+            the fuel tank (above the rider's leg). British and many other motorcycles after World War II used a lever on
+            the right (with the brake on the left), but today gear-changing is standardised on a foot-operated lever to
+            the left.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Scooters, underbones, and miniatures :<br>
+            </span>
+            Traditional scooters (such as the Vespa) still have manual gear-changing by a twist grip on the left-hand
+            side of the handlebar, with a co-rotated clutch lever. Modern scooters were often fitted with a
+            throttle-controlled continuously variable transmission, thus earning the term twist-and-go.<br><br>
+
+            Underbone and miniature motorcycles often have a three to five-speed foot-shift lever, but the clutch is
+            automatic (usually a centrifugal clutch). This type of clutchless (no manual clutch) transmission still must
+            have the gears shifted manually by the rider, and the system is commonly known as a semi-automatic
+            transmission.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Clutch :<br>
+            </span>
+            The clutch in a manual-shift motorcycle transmission is typically an arrangement of plates stacked in
+            alternating fashion, one geared on the inside to the engine and the next geared on the outside to the
+            transmission input shaft. Whether wet (rotating in engine oil) or dry, the plates are squeezed together by
+            springs, causing friction build up between the plates until they rotate as a single unit, driving the
+            transmission directly. A lever on the handlebar exploits mechanical advantage through a cable or hydraulic
+            arrangement to release the clutch spring(s), allowing the engine to freewheel with respect to the
+            transmission.<br><br>
+
+            Automatic and semi-automatic transmissions typically use a centrifugal clutch which operates in a different
+            fashion. At idle, the engine is disconnected from the gearbox input shaft, allowing both it and the bike to
+            freewheel (unlike torque converter automatics, there is no "idle creep" with a properly adjusted centrifugal
+            clutch). As the throttle is opened and engine speed rises, counterweights attached to movable inner friction
+            surfaces (connected to the engine shaft) within the clutch assembly are thrown gradually further outwards,
+            until they start to make contact with the inside of the outer housing (connected to the gearbox shaft) and
+            transmit an increasing amount of engine power. The effective "bite point" is found automatically by
+            equilibrium where the power being transmitted through the (still-slipping) clutch is equal to what the
+            engine can provide. This allows relatively fast full-throttle takeoffs (with the clutch adjusted so the
+            engine will be turning near its maximum-torque rpm) without the engine slowing or bogging down, as well as
+            more relaxed starts and low-speed maneuvers at lower throttle settings and RPMs.<br><br>
+
+            Above a certain engine speed - when the bike is properly in motion, so the gearbox input shaft is also
+            rotating quickly and so allowing the engine to accelerate further by way of clutch slip - the outward
+            pressure of the weighted friction plates is sufficient that the clutch will enter full lock-up, the same as
+            a conventional plate-clutch with a fully released lever or pedal. After this, there is no clutch slip, and
+            the engine is locked to and providing all of its available power to the transmission; engine rpm is now
+            dependent on the road speed and the current gear ratio (under either user control in a semi-auto, or reliant
+            on-road speed (and sometimes load/throttle position) in a CVT setup). In a typical CVT, the gear ratio will
+            be chosen so the engine can reach and maintain its maximum-power speed as soon as possible (or at least,
+            when at full throttle, in a partially load-dependent system), but in a semi-auto, the rider is responsible
+            for this choice, and they can ride around all day in top gear (or first) if they so prefer. Also, when the
+            engine is turning fast enough to lock the clutch, it will stay fully engaged until the RPMs fall below that
+            critical point again, even if the throttle is fully released. Below the lock-up point, partially or fully
+            releasing the throttle can lead to the RPM falling off rapidly, thanks to the feedback loop of lower engine
+            speed meaning less friction pressure. This toggle-like mode of operation can lead to certain characteristic
+            centrifugal-clutch-automatic behaviour, such as being able to freewheel rapidly downhill from a standstill,
+            with engine braking only being triggered by turning the throttle briefly (and not then cancellable without
+            braking to quite a slow, gear-dependent pace), and lockup triggering at a lower speed with full versus
+            minimal throttle.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Construction :<br>
+            </span>
+            Pre-unit construction, also called separate construction, is a motorcycle engine architecture where the
+            engine and gearbox are separate casings. In unit construction the engine and gearbox share a single housing.<br><br>
+
+            In many modern designs, the engine sits in front of the gearbox. From a sprocket on one side of the
+            crankshaft, a chain or sprocket directly mounted to the clutch will drive the clutch, which can often be
+            found behind a large circular cover on one side of the gearbox. The clutch is connected to the gearbox input
+            shaft. For motorcycles with chain drive, the gearbox output shaft is typically connected to the sprocket
+            which drives the final drive chain.<br><br>
+
+            Most modern manual motorcycle gearboxes have "constant-mesh" gears which are always mated but may rotate
+            freely on a shaft until locked by a toothed sliding collar, or "dog clutch". Since the gears are always
+            rotating and can only be accessed sequentially, synchromesh is not generally needed. To save space, both
+            shafts may contain a mixture of fixed and free-spinning gears, with some gears built into the sliding parts.<br><br>
+        </div>
+
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

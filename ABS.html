@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABS</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(243, 111, 34);
+            font-style: oblique;
+
+            font-size: 55px;
+        }
+
+        #particles-js {
+            /* background-color: blue; */
+            height: 620vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+            background-color: black;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #467cf0;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                ABS
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            An anti-lock braking system (ABS) is a safety anti-skid braking system used on aircraft and on land
+            vehicles, such as cars, motorcycles, trucks, and buses. ABS operates by preventing the wheels from
+            locking up during braking, thereby maintaining tractive contact with the road surface and allowing the
+            driver to maintain more control over the vehicle.
+
+            ABS is an automated system that uses the principles of threshold braking and cadence braking, techniques
+            which were once practiced by skillful drivers before ABS was widespread. ABS operates at a much faster rate
+            and more effectively than most drivers could manage. Although ABS generally offers improved vehicle control
+            and decreases stopping distances on dry and some slippery surfaces, on loose gravel or snow-covered surfaces
+            ABS may significantly increase braking distance, while still improving steering control. Since ABS
+            was introduced in production vehicles, such systems have become increasingly sophisticated and effective.
+            Modern versions may not only prevent wheel lock under braking, but may also alter the front-to-rear brake
+            bias. This latter function, depending on its specific capabilities and implementation, is known variously as
+            electronic brakeforce distribution, traction control system, emergency brake assist, or electronic stability
+            control (ESC).
+            <br><br>
+        </div>
+
+        <div class="cent">
+            <img src="https://thumbs.gfycat.com/CourteousKindHyracotherium-size_restricted.gif"><br>
+            How Does Anti-lock Braking System (ABS) Technology In Cars Work?
+            <br><br>
+        </div>
+
+        <div class="text_style">
+            <span style="font-size:xx-large; font-weight:bold;">
+                Operation :<br>
+            </span>
+            The anti-lock brake controller is also known as the CAB (Controller Anti-lock Brake).<br><br>
+
+            Typically ABS includes a central electronic control unit (ECU), four wheel speed sensors, and at least two
+            hydraulic valves within the brake hydraulics. The ECU constantly monitors the rotational speed of each
+            wheel; if it detects the wheel rotating significantly slower than the speed of the vehicle, a condition
+            indicative of impending wheel lock, it actuates the valves to reduce hydraulic pressure to the brake at the
+            affected wheel, thus reducing the braking force on that wheel; the wheel then turns faster. Conversely, if
+            the ECU detects a wheel turning significantly faster than the others, brake hydraulic pressure to the wheel
+            is increased so the braking force is reapplied, slowing down the wheel. This process is repeated
+            continuously and can be detected by the driver via brake pedal pulsation. Some anti-lock systems can apply
+            or release braking pressure 15 times per second. Because of this, the wheels of cars equipped with
+            ABS are practically impossible to lock even during panic braking in extreme conditions.<br><br>
+
+            The ECU is programmed to disregard differences in wheel rotative speed below a critical threshold because
+            when the car is turning, the two wheels towards the center of the curve turn slower than the outer two. For
+            this same reason, a differential is used in virtually all roadgoing vehicles.<br><br>
+
+            If a fault develops in any part of the ABS, a warning light will usually be illuminated on the vehicle
+            instrument panel, and the ABS will be disabled until the fault is rectified.<br><br>
+
+            Modern ABS applies individual brake pressure to all four wheels through a control system of hub-mounted
+            sensors and a dedicated micro-controller. ABS is offered or comes standard on most road vehicles produced
+            today and is the foundation for electronic stability control systems, which are rapidly increasing in
+            popularity due to the vast reduction in the price of vehicle electronics over the years.<br><br>
+
+            Modern electronic stability control systems are an evolution of the ABS concept. Here, a minimum of two
+            additional sensors are added to help the system work: these are a steering wheel angle sensor and a
+            gyroscopic sensor. The theory of operation is simple: when the gyroscopic sensor detects that the direction
+            taken by the car does not coincide with what the steering wheel sensor reports, the ESC software will brake
+            the necessary individual wheel(s) (up to three with the most sophisticated systems), so that the vehicle
+            goes the way the driver intends. The steering wheel sensor also helps in the operation of Cornering Brake
+            Control (CBC), since this will tell the ABS that wheels on the inside of the curve should brake more than
+            wheels on the outside, and by how much.<br><br>
+
+            ABS equipment may also be used to implement a traction control system (TCS) on the acceleration of the
+            vehicle. If, when accelerating, the tire loses traction, the ABS controller can detect the situation and
+            take suitable action so that traction is regained. More sophisticated versions of this can also control
+            throttle levels and brakes simultaneously.<br><br>
+
+            The speed sensors of ABS are sometimes used in indirect tire pressure monitoring system (TPMS), which can
+            detect under-inflation of the tire(s) by the difference in the rotational speed of wheels.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Components :<br>
+            </span>
+            There are four main components of ABS: wheel speed sensors, valves, a pump, and a controller.<br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                ABS speed sensors :<br>
+            </span>
+            Speed sensors(Encoders)<br>
+            A speed sensor is used to determine the acceleration or deceleration of the wheel. These sensors use a
+            magnet and a Hall effect sensor, or a toothed wheel and an electromagnetic coil to generate a signal. The
+            rotation of the wheel or differential induces a magnetic field around the sensor. The fluctuations of this
+            magnetic field generate a voltage in the sensor. Since the voltage induced in the sensor is a result of the
+            rotating wheel, this sensor can become inaccurate at slow speeds. The slower rotation of the wheel can cause
+            inaccurate fluctuations in the magnetic field and thus cause inaccurate readings to the controller.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Valves :<br>
+            </span>
+            There is a valve in the brake line of each brake controlled by the ABS. On some systems, the valve has three
+            positions:<br>
+            In position one, the valve is open; pressure from the master cylinder is passed right through to the brake.<br>
+            In position two, the valve blocks the line, isolating that brake from the master cylinder. This prevents the
+            pressure from rising further should the driver push the brake pedal harder.<br>
+            In position three, the valve releases some of the pressure from the brake.<br><br>
+
+            Partially disassembled four-channel hydraulic control unit containing motor, pump and valves
+            The majority of problems with the valve system occur due to clogged valves. When a valve is clogged it is
+            unable to open, close, or change position. An inoperable valve will prevent the system from modulating the
+            valves and controlling pressure supplied to the brakes.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Electronic control module (PUMP) :<br>
+            </span>
+            The pump in the ABS is used to restore the pressure to the hydraulic brakes after the valves have released
+            it. A signal from the controller will release the valve at the detection of wheel slip. After a valve
+            releases the pressure supplied from the user, the pump is used to restore the desired amount of pressure to
+            the braking system. The controller will modulate the pump's status in order to provide the desired amount of
+            pressure and reduce slipping.<br><br>
+            
+            <span style="font-size:x-large; font-weight:bold;">
+                Controller :<br>
+            </span>
+            The controller is an ECU type unit in the car which receives information from each individual wheel speed
+            sensor. If a wheel loses traction, the signal is sent to the controller. The controller will then limit the
+            brake force (EBD) and activate the ABS modulator which actuates the braking valves on and off.<br><br>
+            
+            <span style="font-size:x-large; font-weight:bold;">
+                Use<br>
+            </span>
+            There are many different variations and control algorithms for use in ABS. One of the simpler systems works
+            as follows:<br><br>
+
+            The controller monitors the speed sensors at all times. It is looking for decelerations in the wheel that
+            are out of the ordinary. Right before a wheel locks up, it will experience a rapid deceleration. If left
+            unchecked, the wheel would stop much more quickly than any car could. It might take a car five seconds to
+            stop from 60 mph (96.6 km/h) under ideal conditions, but a wheel that locks up could stop spinning in less
+            than a second.<br><br>
+            The ABS controller knows that such a rapid deceleration of the car is impossible (and in actuality the rapid
+            deceleration means the wheel is about to slip), so it reduces the pressure to that brake until it sees an
+            acceleration, then it increases the pressure until it sees the deceleration again. It can do this very
+            quickly before the wheel can actually significantly change speed. The result is that the wheel slows down at
+            the same rate as the car, with the brakes keeping the wheels very near the point at which they will start to
+            lock up. This gives the system maximum braking power.<br><br>
+            This replaces the need to manually pump the brakes while driving on a slippery or a low traction surface,
+            allowing to steer even in most emergency braking conditions.<br><br>
+            When the ABS is in operation the driver will feel a pulsing in the brake pedal; this comes from the rapid
+            opening and closing of the valves. This pulsing also tells the driver that the ABS has been triggered.<br><br>
+            
+            <span style="font-size:xx-large; font-weight:bold;">
+                Brake types<br>
+            </span>
+            Anti-lock braking systems use different schemes depending on the type of brakes in use. They can be
+            differentiated by the number of channels: that is, how many valves that are individually controlled—and the
+            number of speed sensors.<br>
+
+            <span style="font-weight: bold;">1) Four-channel, four-sensor ABS<br></span>
+            There is a speed sensor on all four wheels and a separate valve for all four wheels. With this setup, the
+            controller monitors each wheel individually to make sure it is achieving maximum braking force.<br><br>
+            <span style="font-weight: bold;">2) Three-channel, four-sensor ABS<br></span>
+            There is a speed sensor on all four wheels and a separate valve for each of the front wheels, but only one
+            valve for both of the rear wheels. Older vehicles with four-wheel ABS usually use this type.<br><br>
+            <span style="font-weight: bold;">3) Three-channel, three-sensor ABS<br></span>
+            This scheme, commonly found on pickup trucks with four-wheel ABS, has a speed sensor and a valve for each of
+            the front wheels, with one valve and one sensor for both rear wheels. The speed sensor for the rear wheels
+            is located in the rear axle. This system provides individual control of the front wheels, so they can both
+            achieve maximum braking force. The rear wheels, however, are monitored together; they both have to start to
+            lock up before the ABS will activate on the rear. With this system, it is possible that one of the rear
+            wheels will lock during a stop, reducing brake effectiveness. This system is easy to identify, as there are
+            no individual speed sensors for the rear wheels.<br><br>
+            <span style="font-weight: bold;">4) Two-channel, four-sensor ABS<br></span>
+            This system, commonly found on passenger cars from the late '80s through the mid-1990s, uses a speed sensor
+            at each wheel, with one control valve each for the front and rear wheels as a pair. If the speed sensor
+            detects lock up at any individual wheel, the control module pulses the valve for both wheels on that end of
+            the car.<br><br>
+            <span style="font-weight: bold;">5) One-channel, one-sensor ABS<br></span>
+            This system is commonly found on pickup trucks, SUVs, and vans with rear-wheel ABS. It has one valve, which
+            controls both rear wheels, and a one-speed sensor, located in the rear axle. This system operates the same
+            as the rear end of a three-channel system. The rear wheels are monitored together and they both have to
+            start to lock up before the ABS kicks in. In this system it is also possible that one of the rear wheels
+            will lock, reducing brake effectiveness. This system is also easy to identify, as there are no individual
+            speed sensors for any of the wheels.<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                ABS on motorcycles:<br>
+            </span>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                The ABS sensor of a BMW K 1100 LT<br>
+            </span>
+
+            A toothed-wheel ABS sensor. These are the front brake discs on a BMW R1150GS. The toothed ABS ring indicates
+            that this bike was manufactured before November 2002.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Another toothed-wheel ABS sensor. This is on a BMW K75 motorcycle.<br>
+            </span>
+            On a motorcycle, an anti-lock brake system prevents the wheels of a powered two wheeler from locking during
+            braking situations. Based on information from wheel speed sensors the ABS unit adjusts the pressure of the
+            brake fluid in order to keep traction during deceleration to avoid accidents. Motorcycle ABS helps the rider
+            to maintain stability during braking and to decrease the stopping distance. It provides traction even on low
+            friction surfaces. While older ABS models are derived from cars, recent ABS is the result of research,
+            oriented on the specifics of motorcycles in case of size, weight, and functionality. National and
+            international organizations evaluate Motorcycle ABS as an important factor to increase safety and reduce
+            motorcycle accident numbers. The European Commission passed legislation in 2012 that made the fitment with
+            ABS for all new motorcycles above 125 cm3 to be mandatory from 1 January 2016. Consumer Reports said in 2016
+            that "ABS is commonly offered on large, expensive models, but it has been spreading to several entry-level
+            sportbikes and midsized bikes"<br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Safety :<br>
+            </span>
+            The Insurance Institute for Highway Safety (IIHS) conducted a study on the effectiveness of ABS for
+            motorcycles and came to the conclusion that motorcycles above 250 cm3 without ABS are 37 percent more likely
+            to be involved in fatal crashes and a study of the Swedish Road Administration came to the conclusion that
+            48 percent of all severe and fatal motorcycle accidents above 125 cm3 could be avoided due to motorcycle
+            ABS.<br><br>
+
+            These studies caused the EU commission to initiate a legislative process in 2010 that was passed in 2012 and
+            led to ABS for motorcycles above 125 cm3 becoming mandatory from 2016 onwards. Organizations like the
+            Fédération Internationale de l’Automobile and the Institute of advanced Motorists (IAM) demanded the
+            implementation of this legislation already for 2015. On the other hand, some motorcycle riders are
+            protesting against a compulsory ABS for all bikes because they call for a possibility to switch the system
+            off, for off-road usage or for other reasons. In 2011 the United Nations (UN) started the Decade
+            of Action for Road Safety. The main goal is to save 5 million lives until 2020 through global
+            cooperation. One part of their global plan is to: Encourage universal deployment of crash avoidance
+            technologies with proven effectiveness such as Electronic Stability Control and Anti-Lock Braking Systems in
+            motorcycles.<br><br>
+
+            In 2000 a British study considered the ABS did not perform fully because people did not understand how it
+            works.<br><br>
+
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

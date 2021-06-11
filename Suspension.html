@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suspension</title>
+    <link rel="shortcut icon" type="image/png" href="s_icon.png">
+
+    <style>
+        .navbar li {
+            margin: 13px 20px;
+        }
+
+        .ll {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: x-large;
+        }
+
+        .heading {
+            /* background-color: rgb(2, 27, 44); */
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+
+            color: rgb(38, 98, 228);
+            font-style: oblique;
+
+            font-size: 55px;
+        }
+
+        #particles-js {
+            background-color: black;
+            height: 440vh;
+
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.kolpaper.com/wp-content/uploads/2020/06/Cyberpunk-4K-Wallpaper.jpg); */
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .well {
+            position: absolute;
+            color: #fff;
+        }
+
+        .cent {
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-size: small;
+        }
+
+        .text_style {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            color: rgb(240, 232, 232);
+
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 1%;
+
+            text-align: justify;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #e76632;">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv30qLUj9vbXxhdDs2P-wYz9-4imJEZZLgJevXeI0lZvsIG4RgyJn7vtukx-IG9A3Paz0&usqp=CAU"
+                            width="100px" height="50px">
+                    </li>
+                    <li class="cente">
+                        <span class="ll">
+                            MOTO INFO BY AMAN & ANKIT
+                        </span>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <span
+                        style="color: rgb(247, 243, 243); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;"
+                        id="time"></span>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+        function timed() {
+            let tim = new Date;
+            document.getElementById('time').innerHTML = tim;
+        }
+        setInterval(timed, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <div class="heading">
+                Suspension
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Companies.html">Companies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" class="nav-link active" aria-current="page"
+                            style="color: rgb(31, 183, 189); font-size: larger;" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Know
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Engine Displacement(CC).html">Engine Displacement(CC)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="Transmission.html">Transmission</a></li>
+                            <li><a class="dropdown-item" href="ABS.html">ABS</a></li>
+                            <li><a class="dropdown-item" href="Suspension.html">Suspension</a></li>
+                            <li><a class="dropdown-item" href="Torque.html">Torque</a></li>
+                            <li><a class="dropdown-item" href="Tires.html">Tires</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About us</a>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+
+    <div class="well">
+        <div class="text_style">
+            Suspension is the system of tires, tire air, springs, shock absorbers and linkages that connects a vehicle
+            to its wheels and allows relative motion between the two. Suspension systems must support both road
+            holding/handling and ride quality, which are at odds with each other. The tuning of suspensions involves
+            finding the right compromise. It is important for the suspension to keep the road wheel in contact with the
+            road surface as much as possible, because all the road or ground forces acting on the vehicle do so through
+            the contact patches of the tires. The suspension also protects the vehicle itself and any cargo or luggage
+            from damage and wear. The design of front and rear suspension of a car may be different.
+            <br><br>
+        </div>
+
+        <div class="cent">
+            <img src="https://media1.giphy.com/media/l41lQbIkrAJwHpoHe/giphy.gif"><br>
+            Wishbone Suspension working depicted.
+            <br><br>
+        </div>
+
+        <div class="text_style">
+            <span style="font-size:xx-large; font-weight:bold;">
+                Spring, wheel, and roll rates :<br>
+            </span>
+            <span style="font-size:x-large; font-weight:bold;">
+                Spring rate :<br>
+            </span>
+            The spring rate (or suspension rate) is a component in setting the vehicle's ride height or its location in
+            the suspension stroke. When a spring is compressed or stretched, the force it exerts, is proportional to its
+            change in length. The spring rate or spring constant of a spring is the change in the force it exerts,
+            divided by the change in deflection of the spring. Vehicles that carry heavy loads, will often have heavier
+            springs to compensate for the additional weight that would otherwise collapse a vehicle to the bottom of its
+            travel (stroke). Heavier springs are also used in performance applications, where the loading conditions
+            experienced are more significant.<br><br>
+
+            Springs that are too hard or too soft cause the suspension to become ineffective – mostly because they fail
+            to properly isolate the vehicle from the road. Vehicles that commonly experience suspension loads heavier
+            than normal, have heavy or hard springs, with a spring rate close to the upper limit for that vehicle's
+            weight. This allows the vehicle to perform properly under a heavy load, when control is limited by the
+            inertia of the load. Riding in an empty truck meant for carrying loads can be uncomfortable for passengers,
+            because of its high spring rate relative to the weight of the vehicle. A race car could also be described as
+            having heavy springs, and would also be uncomfortably bumpy. However, even though we say they both have
+            heavy springs, the actual spring rates for a 2,000 lb (910 kg) racecar and a 10,000 lb (4,500 kg) truck are
+            very different. A luxury car, taxi, or passenger bus would be described as having soft springs, for the
+            comfort of their passengers or driver. Vehicles with worn-out or damaged springs ride lower to the ground,
+            which reduces the overall amount of compression available to the suspension, and increases the amount of
+            body lean. Performance vehicles can sometimes have spring rate requirements other than vehicle weight and
+            load.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Wheel rate :<br>
+            </span>
+            Wheel rate is the effective spring rate when measured at the wheel, as opposed to simply measuring the
+            spring rate alone.<br><br>
+
+            Wheel rate is usually equal to or considerably less than the spring rate. Commonly, springs are mounted on
+            control arms, swing arms or some other pivoting suspension member. Consider the example above, where the
+            spring rate was calculated to be 500 lbs/inch (87.5 N/mm), if one were to move the wheel 1 in (2.5 cm)
+            (without moving the car), the spring more than likely compresses a smaller amount. If the spring moved 0.75
+            in (19 mm), the lever arm ratio would be 0.75:1. The wheel rate is calculated by taking the square of the
+            ratio (0.5625) times the spring rate, thus obtaining 281.25 lbs/inch (49.25 N/mm). Squaring the ratio is,
+            because the ratio has two effects on the wheel rate: the ratio applies to both the force and the distance
+            traveled.<br><br>
+
+            Wheel rate on independent suspension is fairly straightforward. However, special consideration must be taken
+            with some non-independent suspension designs. Take the case of the straight axle. When viewed from the front
+            or rear, the wheel rate can be measured by the means above. Yet, because the wheels are not independent,
+            when viewed from the side under acceleration or braking, the pivot point is at infinity (because both wheels
+            have moved) and the spring is directly inline with the wheel contact patch. The result is often, that the
+            effective wheel rate under cornering is different from what it is under acceleration and braking. This
+            variation in wheel rate may be minimised by locating the spring as close to the wheel as possible.<br><br>
+
+            Wheel rates are usually summed and compared with the sprung mass of a vehicle to create a "ride rate" and
+            the corresponding suspension natural frequency in ride (also referred to as "heave"). This can be useful in
+            creating a metric for suspension stiffness and travel requirements for a vehicle.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Roll rate :<br>
+            </span>
+            Roll rate is analogous to a vehicle's ride rate, but for actions that include lateral accelerations, causing
+            a vehicle's sprung mass to roll. It is expressed as torque per degree of roll of the vehicle sprung mass. It
+            is influenced by factors including but not limited to vehicle sprung mass, track width, CG height, spring
+            and damper rates, roll centre heights of front and rear, anti-roll bar stiffness and tire
+            pressure/construction. The roll rate of a vehicle can, and usually, does differ front-to-rear, which allows
+            for the tuning ability of a vehicle for transient and steady-state handling. The roll rate of a vehicle does
+            not change the total amount of weight transfer on the vehicle, but shifts the speed and percentage of weight
+            transferred on a particular axle to another axle through the vehicle chassis. Generally, the higher the roll
+            rate on an axle of a vehicle, the faster and higher percentage the weight transfer on that axle.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Roll couple percentage :<br>
+            </span>
+            Roll couple percentage is a simplified method of describing lateral load transfer distribution front to
+            rear, and subsequently handling balance. It is the effective wheel rate, in roll, of each axle of the
+            vehicle as a ratio of the vehicle's total roll rate. It is commonly adjusted through the use of anti-roll
+            bars, but can also be changed through the use of different springs.<br><br><br>
+
+            <span style="font-size:xx-large; font-weight:bold;">
+                Weight transfer :<br>
+            </span>
+            Weight transfer during cornering, acceleration, or braking is usually calculated per individual wheel, and
+            compared with the static weights for the same wheels.<br><br>
+
+            The total amount of weight transfer is only affected by four factors: the distance between wheel centers
+            (wheelbase in the case of braking, or track width in the case of cornering), the height of the center of
+            gravity, the mass of the vehicle, and the amount of acceleration experienced.<br><br>
+
+            The speed at which weight transfer occurs, as well as through which components it transfers, is complex, and
+            is determined by many factors; including, but not limited to: roll center height, spring and damper rates,
+            anti-roll bar stiffness, and the kinematic design of suspension links.<br><br>
+
+            In most conventional applications, when weight is transferred through intentionally compliant elements, such
+            as springs, dampers, and anti-roll bars, the weight transfer is said to be "elastic", while the weight which
+            is transferred through more rigid suspension links, such as A-arms and toe links, is said to be "geometric".<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Unsprung weight transfer :<br>
+            </span>
+            Unsprung weight transfer is calculated based on weight of the vehicle's components that are not supported by
+            the springs. This includes tires, wheels, brakes, spindles, half the control arm's weight, and other
+            components. These components are then (for calculation purposes) assumed to be connected to a vehicle with
+            zero sprung weight. They are then put through the same dynamic loads.<br><br>
+
+            The weight transfer for cornering in the front would be equal to the total unsprung front weight times the
+            G-force times the front unsprung center of gravity height divided by the front track width. The same is true
+            for the rear.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Sprung weight transfer :<br>
+            </span>
+            Sprung weight transfer is the weight transferred by only the weight of the vehicle resting on its springs,
+            and not by total vehicle weight. Calculating this requires knowing the vehicle's sprung weight (total weight
+            less the unsprung weight), the front and rear roll center heights, and the sprung center of gravity height
+            (used to calculate the roll moment arm length). Calculating the front and rear sprung weight transfer will
+            also require knowing the roll couple percentage.<br><br>
+
+            The roll axis is the line through the front and rear roll centers that the vehicle rolls around during
+            cornering. The distance from this axis to the sprung center of gravity height is the roll moment arm length.
+            The total sprung weight transfer is equal to the G-force times the sprung weight times the roll moment arm
+            length divided by the effective track width. The front sprung weight transfer is calculated by multiplying
+            the roll couple percentage times the total sprung weight transfer. The rear is the total minus the front
+            transfer.<br><br>
+
+            <span style="font-size:x-large; font-weight:bold;">
+                Jacking forces :<br>
+            </span>
+            Jacking forces are the sum of the vertical force components experienced by suspension links. The resultant
+            force acts to lift the sprung mass, if the roll center is above ground, or compress it, if underground.
+            Generally, the higher the roll center, the more jacking force is experienced.<br><br>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
